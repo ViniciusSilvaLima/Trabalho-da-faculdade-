@@ -1,0 +1,44 @@
+import javax.swing.JOptionPane;
+import java.util.Stack;
+
+public class PilhaGenerica {
+    public static void main(String[] args) {
+        Stack<String> pilha = new Stack<>();
+        String opcao;
+
+        do {
+            opcao = JOptionPane.showInputDialog(null,
+                "Escolha uma opção:\n1 - Empilhar\n2 - Desempilhar\n3 - Ver Topo\n4 - Sair");
+
+            if (opcao == null) break;
+
+            switch (opcao) {
+                case "1":
+                    String valor = JOptionPane.showInputDialog("Digite o valor para empilhar:");
+                    pilha.push(valor);
+                    JOptionPane.showMessageDialog(null, "Valor " + valor + " empilhado.");
+                    break;
+                case "2":
+                    if (!pilha.isEmpty()) {
+                        String removido = pilha.pop();
+                        JOptionPane.showMessageDialog(null, "Removido: " + removido);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Pilha vazia!");
+                    }
+                    break;
+                case "3":
+                    if (!pilha.isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "Topo da pilha: " + pilha.peek());
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Pilha vazia!");
+                    }
+                    break;
+                case "4":
+                    JOptionPane.showMessageDialog(null, "Saindo...");
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção inválida!");
+            }
+        } while (!"4".equals(opcao));
+    }
+}

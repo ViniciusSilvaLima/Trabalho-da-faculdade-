@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulador de Java</title>
+  <link rel="stylesheet" href="frontend/style/java.css" />
+  <link rel="icon" href="frontend/logo/faculdade.png">
+</head>
+<body>
+  <header>
+    <h1>Execução Java</h1>
+  </header>
+
+  <a href="index.html"><button class="btn-voltar" href="index.html">← Voltar</button></a>
+  
+
+  <main>
+    <h2>Escolha o código:</h2>
+    <select id="codigoSelecionado">
+      <option value="pilhaGenerica">Pilha Genérica com JOptionPane</option>
+      <option value="pilhaObjetos">Pilha de Objetos</option>
+    </select>
+    <div class="botoes">
+      <button onclick="executarSimulacao()">Executar Código</button>
+      <button onclick="abrirModal()">⬇️ Baixar Código</button>
+    </div>
+
+    <div id="saida" class="terminal"></div>
+  </main>
+
+  <audio id="audioDigitar" src="https://www.myinstants.com/media/sounds/keyboard_typing.mp3"></audio>
+  <audio id="audioErro" src="https://www.myinstants.com/media/sounds/error.mp3"></audio>
+
+ 
+  
+ 
+  <div id="modalDownload" class="modal">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <h3>Escolha o código para baixar:</h3>
+      <a href="doc/PilhaGenerica.txt" download="PilhaGenerica.txt" class="next-button">Pilha Genérica (.txt)</a>
+      <a href="doc/PilhaObjetos.txt" download="PilhaObjetos.txt" class="next-button">Pilha de Objetos (.txt)</a>
+    </div>
+  </div>
+  
+  <script src="frontend/js/java.js"></script>
+  <script src="frontend/js/modal.js"></script>
+  
+</body>
+</html>

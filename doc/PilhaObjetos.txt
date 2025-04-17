@@ -1,0 +1,62 @@
+class Veiculo {
+    String placa, marca, modelo;
+    int ano;
+
+    public Veiculo(String placa, String marca, String modelo, int ano) {
+        this.placa = placa;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+
+    public String toString() {
+        return "Placa: " + placa + ", Marca: " + marca + ", Modelo: " + modelo + ", Ano de Fabricação: " + ano;
+    }
+}
+
+class Pilha<T> {
+    private java.util.ArrayList<T> elementos = new java.util.ArrayList<>();
+
+    public void empilhar(T elemento) {
+        elementos.add(elemento);
+    }
+
+    public T desempilhar() {
+        if (!estaVazia()) {
+            return elementos.remove(elementos.size() - 1);
+        }
+        return null;
+    }
+
+    public boolean estaVazia() {
+        return elementos.isEmpty();
+    }
+
+    public String toString() {
+        return elementos.toString();
+    }
+}
+
+public class PilhaObjetos {
+    public static void main(String[] args) {
+        Pilha<Veiculo> pilha = new Pilha<>();
+
+        pilha.empilhar(new Veiculo("ABC 1234", "Fiat", "Fiat Mobi Drive", 2016));
+        pilha.empilhar(new Veiculo("DEF 5678", "Fiat", "Grande Punto", 2015));
+        pilha.empilhar(new Veiculo("GHI 9101", "Volkswagen", "Gol Trend", 2017));
+        pilha.empilhar(new Veiculo("FDa 2301", "Audi", "A4", 2018));
+
+        System.out.println("P: " + pilha);
+
+        System.out.println("Adicionamos mais um veículo:");
+        pilha.empilhar(new Veiculo("FFL 0007", "Mercedes Benz", "GLA 200", 2017));
+        System.out.println(pilha);
+
+        System.out.println("Retirando da pilha:");
+        while (!pilha.estaVazia()) {
+            System.out.println(pilha.desempilhar());
+        }
+
+        System.out.println("Pilha de veículos totalmente vazia!");
+    }
+}

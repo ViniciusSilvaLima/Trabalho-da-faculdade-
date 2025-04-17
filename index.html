@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algoritmos e Estruturas de Dados</title>
+  <link rel="stylesheet" href="frontend/style/man.css" />
+  <link rel="icon" href="frontend/logo/faculdade.png">
+</head>
+<body>
+  <header>
+    <h1>Algoritmos e Estruturas de Dados</h1>
+  </header>
+  <main>
+    <div class="content fade-slide">
+      <h2>O que é um Algoritmo?</h2>
+      <p>Um algoritmo é uma sequência finita de passos bem definidos usada para resolver um problema. Eles estão presentes em todas as áreas da computação, desde funções simples até sistemas complexos. Quando vários algoritmos trabalham juntos, formam um caso de uso, oferecendo uma funcionalidade ao usuário. No desenvolvimento de software, entender e avaliar a complexidade dos algoritmos é essencial para garantir performance e eficiência.</p>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Complexidade de Algoritmos</h2>
+      <p>A complexidade algorítmica se refere aos recursos necessários para executar um algoritmo, como tempo de processamento e uso de memória. Um exemplo histórico interessante é o da NASA, onde, antes dos computadores IBM 700/7000, os cálculos eram feitos manualmente por “computadores	humanos”. Atualmente, em um cenário de Big Data e computação em nuvem, os algoritmos precisam ser eficientes e escaláveis para lidar com grandes volumes de dados.</p>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Notações Assintóticas</h2>
+      <p>A eficiência de um algoritmo é medida com notações assintóticas, que descrevem o comportamento do algoritmo conforme o tamanho da entrada cresce. As principais notações são:</p>
+      <ul>
+        <li>Big-O (O): Limite superior, o pior caso.</li>
+        <li>Big-Ω (Ômega): Limite inferior, o melhor caso.</li>
+        <li>Big-Θ (Theta): Caso médio, onde o melhor e pior caso são iguais.</li>
+      </ul>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Exemplos de Complexidade</h2>
+      <ul>
+        <li>O(1) – Constante: O tempo de execução não depende do tamanho da entrada.</li>
+        <li>O(n) – Linear: O tempo cresce proporcionalmente ao tamanho da entrada.</li>
+        <li>O(n²) – Quadrática: O tempo cresce exponencialmente com o aumento dos dados.</li>
+      </ul>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Contagem de Operações</h2>
+      <p>A contagem de operações é feita com base em operações primitivas, como comparações e atribuições. Para algoritmos mais simples, a análise é direta, enquanto algoritmos mais complexos, como os recursivos, podem ser analisados por meio de equações de recorrência.</p>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Exemplos Práticos</h2>
+      <ul>
+        <li>Cálculo da média de uma lista: Complexidade O(n), já que depende do número de elementos.</li>
+        <li>Bubble Sort: Complexidade O(n²) devido ao duplo laço for.</li>
+      </ul>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Benchmarking</h2>
+      <p>O benchmarking é a prática de testar algoritmos com diferentes entradas para entender seu desempenho em diferentes cenários. Isso é essencial para decidir qual algoritmo usar em cada situação.</p>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Vetores, Buscas e Ordenação</h2>
+      <p>Vetores-(Arrays): Vetores são estruturas unidimensionais, onde os elementos são armazenados em posições numeradas, geralmente começando pelo índice 0. Acessos aos dados são feitos de maneira eficiente usando vet[i]. Quando precisamos preencher ou embaralhar vetores, 
+        usamos algoritmos como o de Fisher-Yates para gerar números aleatórios ou reorganizar os dados de forma aleatória.
+        </p>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Busca Sequencial</h2>
+      <p>A busca sequencial percorre o vetor elemento por elemento até encontrar o valor desejado. É simples, mas tem complexidade O(n) no pior e no caso médio, já que pode ser necessário verificar todos os elementos.</p>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Busca Binária</h2>
+      <p>A busca binária é mais eficiente, mas exige que o vetor esteja ordenado. Ela compara o valor buscado com o elemento central do vetor e, dependendo do resultado, busca à esquerda ou à direita, reduzindo significativamente o número de comparações.</p>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Deslocamento em Vetores</h2>
+      <p>Para inserir ou remover elementos de um vetor, precisamos deslocar outros elementos, o que pode ser feito com laços for. Isso é importante para manter a integridade da estrutura de dados, especialmente quando os elementos são inseridos ou removidos de posições específicas.</p>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Tabela Hash</h2>
+      <p>Uma tabela hash é uma estrutura de dados que oferece busca rápida através de chaves. A chave funciona como um "endereço" único, permitindo o acesso direto aos dados. Isso é essencial quando há grandes volumes de dados e muitas buscas frequentes.</p>
+    </div>
+
+    <div class="content fade-slide">
+      <h2>Filas Estáticas Sequenciais</h2>
+      <p>Uma fila é uma estrutura de dados do tipo FIFO (First In, First Out), ou seja, o primeiro elemento a entrar é o primeiro a sair. As operações principais são enqueue(x) para adicionar um item e dequeue() para remover o primeiro item.</p>
+    </div>
+
+
+    <div class="button-container">
+      <button id="openModalBtn" class="next-button">Baixar Documento</button>
+      <a class="next-button" href="java.html">Ir para Página com Java</a>
+    </div>
+    
+     
+    <div id="downloadModal" class="modal">
+      <div class="modal-content fade-in">
+        <span class="close">&times;</span>
+        <h2>Escolha o formato para download</h2>
+        <div class="modal-buttons">
+          <a href="doc/TrabalhoA2.docx" download="TrabalhoA2.docx" class="next-button">Download Word</a>
+          <a href="doc/TrabalhoA2.pdf" download="TrabalhoA2.pdf" class="next-button">Download PDF</a>
+ </div>
+      </div>
+    </div>
+    
+
+  
+<footer>
+  <p>&copy; 2025 - Universidade Cruzeiro do Sul</p>
+</footer>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll('.fade-slide');
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('show');
+        }, 300 * index); 
+      });
+    });
+  </script>
+
+<script>
+  const modal = document.getElementById("downloadModal");
+  const btn = document.getElementById("openModalBtn");
+  const modalContent = modal.querySelector(".modal-content");
+  const span = modal.querySelector(".close");
+
+  btn.onclick = () => {
+    modal.style.display = "block";
+    modalContent.classList.remove("fade-out");
+    modalContent.classList.add("fade-in");
+  };
+
+  const closeModal = () => {
+    modalContent.classList.remove("fade-in");
+    modalContent.classList.add("fade-out");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300); 
+  };
+
+  span.onclick = closeModal;
+  window.onclick = (event) => {
+    if (event.target == modal) {
+      closeModal();
+    }
+  };
+</script>
+  
+
+  <script src="frontend/js/modal.js"></script>
+  <script src="frontend/js/main.js"></script>
+  
+</body>
+</html>
