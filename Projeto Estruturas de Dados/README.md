@@ -72,7 +72,7 @@ Os documentos podem ser encontrados na pasta `doc/` e baixados diretamente pelos
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/ViniciusSilvaLima/Trabalho-da-faculdade-.git
+   git clone https://github.com/ViniciusSilvaLima/Trabalhos-da-faculdade-
    ```
 
 2. Navegue até o diretório:
